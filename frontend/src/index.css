@@ -1,0 +1,92 @@
+:root {
+  --primary-color: #111111;
+  --secondary-color: #D4AF37;
+  --accent-color: #E6BE8A;
+  --text-color: #F5F5F5;
+  --highlight-color: #FFF8E1;
+  --danger-color: #e74c3c;
+  --success-color: #27ae60;
+  --background-color: #ffffff;
+
+    /* New AlBidaa-inspired colors */
+  --primary-color: #38281D; /* Rich brown */
+  --secondary-color: #C7A976; /* Gold */
+  --accent-color: #DBC8A0; /* Light beige */
+  --text-color: #F5F5F5; /* Keep light text */
+  --highlight-color: #F4EEE1; /* Pale cream */
+  --background-color: #ffffff;
+  --light-beige: #F9F5EB; /* Additional beige for backgrounds */
+  --dark-accent: #6B4B35; /* Darker brown for some elements */
+
+
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --transition-speed: 0.3s;
+  --border-radius: 4px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+  color: #333;
+  line-height: 1.6;
+} */
+
+body {
+  font-family: 'Jost', sans-serif;
+  /* background-color: var(--background-color); */
+  background-color: var(--light-beige);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* RTL Support */
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+.ltr {
+  direction: ltr;
+  text-align: left;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+button {
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+}
+
+/* Arabic Font Support */
+.rtl {
+  font-family: 'Dubai', 'Amiri', sans-serif;
+}
+
+.rtl h1, .rtl h2, .rtl h3, .rtl h4, .rtl h5, .rtl h6 {
+  font-family: 'Dubai', 'Amiri', serif;
+}
+
+.main-content {
+  min-height: calc(100vh - 160px);
+  padding: 20px 0;
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap'); */

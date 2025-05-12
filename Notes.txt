@@ -1,0 +1,2 @@
+Navigation bar needs fixes...like elements touch each other, spacing of navigation bar items should be fixed,
+also translation should be added completely (i think there still a lot to be added)
