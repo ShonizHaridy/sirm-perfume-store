@@ -39,180 +39,180 @@ const AdminOrders = () => {
     };
 
     // Mock data for development
-    setTimeout(() => {
-      const mockOrders = [
-        {
-          _id: '1001',
-          orderNumber: 'ORD-1001',
-          customer: {
-            name: 'Ahmed Ali',
-            email: 'ahmed@example.com',
-            phone: '+966 123 456 789'
-          },
-          items: [
-            {
-              product: {
-                _id: '1',
-                name: 'Musk 100ml',
-                price: 230.00,
-                image: '/images/musk_bottle.png'
-              },
-              quantity: 2,
-              price: 230.00
-            },
-            {
-              product: {
-                _id: '2',
-                name: 'The fifth 100ml',
-                price: 230.00,
-                image: '/images/fifth_bottle.png'
-              },
-              quantity: 1,
-              price: 230.00
-            }
-          ],
-          totalAmount: 690.00,
-          status: 'completed',
-          shippingAddress: {
-            address: '123 Main St, Riyadh',
-            city: 'Riyadh',
-            postalCode: '12345',
-            country: 'Saudi Arabia'
-          },
-          paymentMethod: 'credit_card',
-          createdAt: '2023-05-10T10:30:00.000Z',
-          updatedAt: '2023-05-12T14:20:00.000Z'
-        },
-        {
-          _id: '1002',
-          orderNumber: 'ORD-1002',
-          customer: {
-            name: 'Sara Mohammed',
-            email: 'sara@example.com',
-            phone: '+966 987 654 321'
-          },
-          items: [
-            {
-              product: {
-                _id: '4',
-                name: 'Bliss 100ml',
-                price: 230.00,
-                image: '/images/bliss_bottle.png'
-              },
-              quantity: 1,
-              price: 230.00
-            }
-          ],
-          totalAmount: 230.00,
-          status: 'processing',
-          shippingAddress: {
-            address: '456 Oak St, Jeddah',
-            city: 'Jeddah',
-            postalCode: '54321',
-            country: 'Saudi Arabia'
-          },
-          paymentMethod: 'cash_on_delivery',
-          createdAt: '2023-05-15T09:15:00.000Z',
-          updatedAt: '2023-05-15T09:15:00.000Z'
-        },
-        {
-          _id: '1003',
-          orderNumber: 'ORD-1003',
-          customer: {
-            name: 'Khalid Ibrahim',
-            email: 'khalid@example.com',
-            phone: '+966 456 789 123'
-          },
-          items: [
-            {
-              product: {
-                _id: '3',
-                name: 'Flow of three 100ml',
-                price: 230.00,
-                image: '/images/flow_bottle.png'
-              },
-              quantity: 1,
-              price: 230.00
-            },
-            {
-              product: {
-                _id: '1',
-                name: 'Musk 100ml',
-                price: 230.00,
-                image: '/images/musk_bottle.png'
-              },
-              quantity: 2,
-              price: 230.00
-            }
-          ],
-          totalAmount: 690.00,
-          status: 'shipped',
-          shippingAddress: {
-            address: '789 Pine St, Dammam',
-            city: 'Dammam',
-            postalCode: '67890',
-            country: 'Saudi Arabia'
-          },
-          paymentMethod: 'credit_card',
-          createdAt: '2023-05-18T15:45:00.000Z',
-          updatedAt: '2023-05-19T11:30:00.000Z'
-        },
-        {
-          _id: '1004',
-          orderNumber: 'ORD-1004',
-          customer: {
-            name: 'Fatima Ahmed',
-            email: 'fatima@example.com',
-            phone: '+966 789 123 456'
-          },
-          items: [
-            {
-              product: {
-                _id: '2',
-                name: 'The fifth 100ml',
-                price: 230.00,
-                image: '/images/fifth_bottle.png'
-              },
-              quantity: 1,
-              price: 230.00
-            }
-          ],
-          totalAmount: 230.00,
-          status: 'cancelled',
-          shippingAddress: {
-            address: '321 Elm St, Mecca',
-            city: 'Mecca',
-            postalCode: '13579',
-            country: 'Saudi Arabia'
-          },
-          paymentMethod: 'cash_on_delivery',
-          createdAt: '2023-05-20T08:00:00.000Z',
-          updatedAt: '2023-05-21T10:15:00.000Z'
-        }
-      ];
+    // setTimeout(() => {
+    //   const mockOrders = [
+    //     {
+    //       _id: '1001',
+    //       orderNumber: 'ORD-1001',
+    //       customer: {
+    //         name: 'Ahmed Ali',
+    //         email: 'ahmed@example.com',
+    //         phone: '+966 123 456 789'
+    //       },
+    //       items: [
+    //         {
+    //           product: {
+    //             _id: '1',
+    //             name: 'Musk 100ml',
+    //             price: 230.00,
+    //             image: '/images/musk_bottle.png'
+    //           },
+    //           quantity: 2,
+    //           price: 230.00
+    //         },
+    //         {
+    //           product: {
+    //             _id: '2',
+    //             name: 'The fifth 100ml',
+    //             price: 230.00,
+    //             image: '/images/fifth_bottle.png'
+    //           },
+    //           quantity: 1,
+    //           price: 230.00
+    //         }
+    //       ],
+    //       totalAmount: 690.00,
+    //       status: 'completed',
+    //       shippingAddress: {
+    //         address: '123 Main St, Riyadh',
+    //         city: 'Riyadh',
+    //         postalCode: '12345',
+    //         country: 'Saudi Arabia'
+    //       },
+    //       paymentMethod: 'credit_card',
+    //       createdAt: '2023-05-10T10:30:00.000Z',
+    //       updatedAt: '2023-05-12T14:20:00.000Z'
+    //     },
+    //     {
+    //       _id: '1002',
+    //       orderNumber: 'ORD-1002',
+    //       customer: {
+    //         name: 'Sara Mohammed',
+    //         email: 'sara@example.com',
+    //         phone: '+966 987 654 321'
+    //       },
+    //       items: [
+    //         {
+    //           product: {
+    //             _id: '4',
+    //             name: 'Bliss 100ml',
+    //             price: 230.00,
+    //             image: '/images/bliss_bottle.png'
+    //           },
+    //           quantity: 1,
+    //           price: 230.00
+    //         }
+    //       ],
+    //       totalAmount: 230.00,
+    //       status: 'processing',
+    //       shippingAddress: {
+    //         address: '456 Oak St, Jeddah',
+    //         city: 'Jeddah',
+    //         postalCode: '54321',
+    //         country: 'Saudi Arabia'
+    //       },
+    //       paymentMethod: 'cash_on_delivery',
+    //       createdAt: '2023-05-15T09:15:00.000Z',
+    //       updatedAt: '2023-05-15T09:15:00.000Z'
+    //     },
+    //     {
+    //       _id: '1003',
+    //       orderNumber: 'ORD-1003',
+    //       customer: {
+    //         name: 'Khalid Ibrahim',
+    //         email: 'khalid@example.com',
+    //         phone: '+966 456 789 123'
+    //       },
+    //       items: [
+    //         {
+    //           product: {
+    //             _id: '3',
+    //             name: 'Flow of three 100ml',
+    //             price: 230.00,
+    //             image: '/images/flow_bottle.png'
+    //           },
+    //           quantity: 1,
+    //           price: 230.00
+    //         },
+    //         {
+    //           product: {
+    //             _id: '1',
+    //             name: 'Musk 100ml',
+    //             price: 230.00,
+    //             image: '/images/musk_bottle.png'
+    //           },
+    //           quantity: 2,
+    //           price: 230.00
+    //         }
+    //       ],
+    //       totalAmount: 690.00,
+    //       status: 'shipped',
+    //       shippingAddress: {
+    //         address: '789 Pine St, Dammam',
+    //         city: 'Dammam',
+    //         postalCode: '67890',
+    //         country: 'Saudi Arabia'
+    //       },
+    //       paymentMethod: 'credit_card',
+    //       createdAt: '2023-05-18T15:45:00.000Z',
+    //       updatedAt: '2023-05-19T11:30:00.000Z'
+    //     },
+    //     {
+    //       _id: '1004',
+    //       orderNumber: 'ORD-1004',
+    //       customer: {
+    //         name: 'Fatima Ahmed',
+    //         email: 'fatima@example.com',
+    //         phone: '+966 789 123 456'
+    //       },
+    //       items: [
+    //         {
+    //           product: {
+    //             _id: '2',
+    //             name: 'The fifth 100ml',
+    //             price: 230.00,
+    //             image: '/images/fifth_bottle.png'
+    //           },
+    //           quantity: 1,
+    //           price: 230.00
+    //         }
+    //       ],
+    //       totalAmount: 230.00,
+    //       status: 'cancelled',
+    //       shippingAddress: {
+    //         address: '321 Elm St, Mecca',
+    //         city: 'Mecca',
+    //         postalCode: '13579',
+    //         country: 'Saudi Arabia'
+    //       },
+    //       paymentMethod: 'cash_on_delivery',
+    //       createdAt: '2023-05-20T08:00:00.000Z',
+    //       updatedAt: '2023-05-21T10:15:00.000Z'
+    //     }
+    //   ];
       
       // Filter orders based on search and status filter
-      let filteredOrders = mockOrders;
+      // let filteredOrders = mockOrders;
       
-      if (filterStatus !== 'all') {
-        filteredOrders = filteredOrders.filter(order => order.status === filterStatus);
-      }
+      // if (filterStatus !== 'all') {
+      //   filteredOrders = filteredOrders.filter(order => order.status === filterStatus);
+      // }
       
-      if (searchQuery) {
-        const query = searchQuery.toLowerCase();
-        filteredOrders = filteredOrders.filter(order => 
-          order.orderNumber.toLowerCase().includes(query) ||
-          order.customer.name.toLowerCase().includes(query) ||
-          order.customer.email.toLowerCase().includes(query)
-        );
-      }
+      // if (searchQuery) {
+      //   const query = searchQuery.toLowerCase();
+      //   filteredOrders = filteredOrders.filter(order => 
+      //     order.orderNumber.toLowerCase().includes(query) ||
+      //     order.customer.name.toLowerCase().includes(query) ||
+      //     order.customer.email.toLowerCase().includes(query)
+      //   );
+      // }
       
-      setOrders(filteredOrders);
-      setTotalPages(Math.ceil(filteredOrders.length / 10));
-      setLoading(false);
-    }, 1000);
+    //   setOrders(filteredOrders);
+    //   setTotalPages(Math.ceil(filteredOrders.length / 10));
+    //   setLoading(false);
+    // }, 1000);
 
-    // fetchOrders(); // Uncomment when backend is connected
+    fetchOrders(); // Uncomment when backend is connected
   }, [currentPage, filterStatus, searchQuery]);
 
   const handleSearch = (e) => {
@@ -301,33 +301,41 @@ const AdminOrders = () => {
             </tr>
           </thead>
           <tbody>
-            {orders.map((order) => (
-              <tr key={order._id}>
-                <td>{order.orderNumber}</td>
-                <td>{order.customer.name}</td>
-                <td>{formatDate(order.createdAt)}</td>
-                <td>﷼ {order.totalAmount.toFixed(2)}</td>
-                <td>
-                  <OrderStatus status={order.status}>
-                    {order.status.charAt(0).toUpperCase() + order.status.slice(1)}
-                  </OrderStatus>
-                </td>
-                <td>
-                  <ActionButtons>
-                    <ViewButton onClick={() => handleViewOrder(order)}>
-                      <FaEye />
-                    </ViewButton>
-                    <InvoiceButton>
-                      <FaFileDownload />
-                    </InvoiceButton>
-                  </ActionButtons>
-                </td>
-              </tr>
-            ))}
+  {orders && orders.length > 0 ? (
+    orders.map((order) => (
+      <tr key={order._id}>
+        <td>{order?.orderNumber || 'N/A'}</td>
+        <td>{order?.customer?.name || 'Unknown'}</td>
+        <td>{order?.createdAt ? formatDate(order.createdAt) : 'N/A'}</td>
+        <td>﷼ {order?.totalAmount ? order.totalAmount.toFixed(2) : '0.00'}</td>
+        <td>
+          <OrderStatus status={order?.status || 'pending'}>
+            {order?.status ? order.status.charAt(0).toUpperCase() + order.status.slice(1) : 'Pending'}
+          </OrderStatus>
+        </td>
+        <td>
+          <ActionButtons>
+            <ViewButton onClick={() => handleViewOrder(order)}>
+              <FaEye />
+            </ViewButton>
+            <InvoiceButton>
+              <FaFileDownload />
+            </InvoiceButton>
+          </ActionButtons>
+        </td>
+      </tr>
+    ))
+  ) : (
+    <tr>
+      <td colSpan="6" style={{ textAlign: 'center', padding: '20px' }}>
+        {loading ? 'Loading orders...' : 'No orders found'}
+      </td>
+    </tr>
+  )}
           </tbody>
         </OrdersTable>
         
-        {orders.length === 0 && (
+        {orders && orders.length === 0 && !loading && (
           <NoOrdersMessage>No orders found matching your criteria.</NoOrdersMessage>
         )}
         

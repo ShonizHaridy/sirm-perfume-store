@@ -103,8 +103,7 @@ const Dashboard = () => {
               <FaDollarSign style={{ color: '#f39c12' }} />
             </StatIcon>
             <StatInfo>
-              <StatValue>﷼ {stats.totalRevenue.toLocaleString()}</StatValue>
-              <StatLabel>Revenue</StatLabel>
+<StatValue>﷼ {stats.totalRevenue ? stats.totalRevenue.toLocaleString() : '0'}</StatValue>              <StatLabel>Revenue</StatLabel>
             </StatInfo>
           </StatCard>
         </StatsGrid>
@@ -126,22 +125,30 @@ const Dashboard = () => {
             </tr>
           </thead>
           <tbody>
-            {stats.recentOrders.map((order) => (
-              <tr key={order.id}>
-                <td>#{order.id}</td>
-                <td>{order.customer}</td>
-                <td>{new Date(order.date).toLocaleDateString()}</td>
-                <td>﷼ {order.total.toLocaleString()}</td>
-                <td>
-                  <OrderStatus status={order.status}>
-                    {order.status.charAt(0).toUpperCase() + order.status.slice(1)}
-                  </OrderStatus>
-                </td>
-                <td>
-                  <Link to={`/admin/orders/${order.id}`}>View</Link>
-                </td>
-              </tr>
-            ))}
+{stats.recentOrders && stats.recentOrders.length > 0 ? (
+  stats.recentOrders.map((order) => (
+    <tr key={order.id}>
+      <td>#{order.id}</td>
+      <td>{order.customer}</td>
+      <td>{new Date(order.date).toLocaleDateString()}</td>
+      <td>﷼ {order.total.toLocaleString()}</td>
+      <td>
+        <OrderStatus status={order.status}>
+          {order.status.charAt(0).toUpperCase() + order.status.slice(1)}
+        </OrderStatus>
+      </td>
+      <td>
+        <Link to={`/admin/orders/${order.id}`}>View</Link>
+      </td>
+    </tr>
+  ))
+) : (
+  <tr>
+    <td colSpan="6" style={{ textAlign: 'center', padding: '20px' }}>
+      No recent orders found
+    </td>
+  </tr>
+)}
           </tbody>
         </OrdersTable>
       </MainContent>
